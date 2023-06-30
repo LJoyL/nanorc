@@ -19,7 +19,7 @@ from . import confdata
 from rich.traceback import Traceback
 from rich.table import Table
 from .runinfo import start_run, print_run_info
-
+from nanorc.node import ApplicationNode
 from datetime import datetime
 
 from typing import Union, NoReturn
@@ -116,7 +116,6 @@ class NanoRC:
         node_to_send = None
         extra_arg={}
         check_children = False
-        from nanorc.node import ApplicationNode
         
         if not node_path:
             self.log.info(f'Sending {command} to all the nodes')
