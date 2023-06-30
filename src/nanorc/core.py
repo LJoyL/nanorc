@@ -116,6 +116,8 @@ class NanoRC:
         node_to_send = None
         extra_arg={}
         check_children = False
+        from nanorc.node import ApplicationNode
+        
         if not node_path:
             self.log.info(f'Sending {command} to all the nodes')
             node_to_send = self.topnode
